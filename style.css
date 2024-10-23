@@ -1,46 +1,60 @@
 * {
-    border:0;
-    margin:0;
-    padding:0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /*Anchors*/
 a {
-    color:#777;
-    text-decoration:none;
+    color: #777;
+    text-decoration: none;
 }
 
 a:hover {
-    color:#333;
-    text-decoration:none;
+    color: #333;
+    text-decoration: none;
 }
 
-/*body*/
+/* General page styles */
 body {
-    background:#fafafa;
-    color:#555;
-    font:0.8em Arial, Helvetic, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
-/* headers*/
-#header {
-	height:80px;
-	margin:0 auto;
-	width:850px;
+/* Header styles */
+h1 {
+    background-color: #ff6347; /*Tomato red*/
+    padding: 20px;
+    text-align: center;
+    color: #fff;
 }
-#header h1 {
-	color:#888;
-	font-size:300%;
-	letter-spacing:1px;
-	text-align:right;
-	padding:5px;
-	margin-bottom:-10px;
+
+h2 {
+    padding: 30px;
+    text-align:right;
+    color: #453;
 }
-#header h2 {
-	color:#888;
-	font-size:300%;
-	letter-spacing:1px;
-	text-align:right;
-	padding:5px;
-	margin-bottom:-10px;
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Paragraph styles */
+p {
+    background-color: #f0e68c; /*Khaki*/
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #4682b4; /*Steel blue*/
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
