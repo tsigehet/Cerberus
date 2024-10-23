@@ -1,0 +1,46 @@
+* {
+    border:0;
+    margin:0;
+    padding:0;
+}
+
+/*Anchors*/
+a {
+    color:#777;
+    text-decoration:none;
+}
+
+a:hover {
+    color:#333;
+    text-decoration:none;
+}
+
+/*body*/
+body {
+    background:#fafafa;
+    color:#555;
+    font:0.8em Arial, Helvetic, sans-serif;
+}
+
+/* headers*/
+#header {
+	height:80px;
+	margin:0 auto;
+	width:850px;
+}
+#header h1 {
+	color:#888;
+	font-size:300%;
+	letter-spacing:1px;
+	text-align:right;
+	padding:5px;
+	margin-bottom:-10px;
+}
+#header h2 {
+	color:#888;
+	font-size:300%;
+	letter-spacing:20px;
+	text-align:right;
+	padding:5px;
+	margin-bottom:-10px;
+}
