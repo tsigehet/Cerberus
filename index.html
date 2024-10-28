@@ -6,14 +6,18 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<h1>This is the portfolio website</h1>
-<h2>Looking cool</h2>
-<h3>Testing things at the moment</h3>
-<main>
-    <p>This is a paragraph of text on my simple HTML page.</p>
-</main>
-<footer>
-    <p>&copy; Footer Example</p>
-</footer>
+<div id="header"></div>
+    <script>
+        fetch('header-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+               });
+    </script>
+    <h2>Looking cool</h2>
+    <h3>Testing things at the moment</h3>
+    <main>
+        <p>This is a paragraph of text on my simple HTML page as a basic setup for the final product</p>
+    </main>
 </body>
 </html>

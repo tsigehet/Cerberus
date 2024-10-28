@@ -23,13 +23,6 @@ body {
 }
 
 /* Header styles */
-h1 {
-    background-color: #ff6347; /*Tomato red*/
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-}
-
 h2 {
     padding: 30px;
     text-align:right;
@@ -46,15 +39,4 @@ p {
     background-color: #f0e68c; /*Khaki*/
     padding: 10px;
     border-radius: 5px;
-}
-
-/* Footer styles */
-footer {
-    background-color: #4682b4; /*Steel blue*/
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
