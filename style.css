@@ -24,9 +24,17 @@ body {
 
 /* Header styles */
 h2 {
-    padding: 30px;
-    text-align:right;
+    padding: 20px;
+    text-align: center;
     color: #453;
+}
+
+/* Image styles */
+img {
+    display: block;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Main content styles */
@@ -39,4 +47,7 @@ p {
     background-color: #f0e68c; /*Khaki*/
     padding: 10px;
     border-radius: 5px;
+}
+.centered-paragraph {
+    text-align: center;
 }

@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Website</title>
+    <title>About Page</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div id="header"></div>
+    <div id="header"></div>
     <script>
         fetch('header-footer.html')
             .then(response => response.text())
@@ -14,11 +14,10 @@
                 document.getElementById('header').innerHTML = data;
                });
     </script>
-    <h2>Looking cool</h2>
-    <img src="mypic.png">
-    <h3>Testing things at the moment</h3>
+    <h2>John Doe is an Interesting Guy</h2>
     <main>
-        <p>This is a paragraph of text on my simple HTML page as a basic setup for the final product</p>
+        <p>He has a job in [blank]. He loves to take long walks on the beach.</p>
+        <p>He likes dogs</p>
     </main>
 </body>
 </html>
