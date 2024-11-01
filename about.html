@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Page</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+               });
+    </script>
+    <h2>John Doe is an Interesting Guy</h2>
+    <main>
+        <p>He has a job in [blank]. He loves to take long walks on the beach.</p>
+        <p>He likes dogs</p>
+    </main>
+</body>
+</html>
