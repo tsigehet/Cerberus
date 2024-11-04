@@ -23,17 +23,15 @@ body {
 }
 
 /* Header styles */
-h1 {
-     background-color: #ff6347;
-     padding: 20px;
-     text-align: left;
-     color: #fff;
+h2 {
+    padding: 30px;
+    text-align:right;
+    color: #453;
 }
 
-h2 {
+/* Main content styles */
+main {
     padding: 20px;
-    text-align: center;
-    color: #453;
 }
 
 /* Paragraph styles */
@@ -42,98 +40,6 @@ p {
     padding: 10px;
     border-radius: 5px;
 }
-.centered-paragraph {
-    text-align: center;
-}
-.right-paragraph {
-    text-align:right;
-    background-color: #FF2255;
-    float: right;
-    width: 300px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-}
-
-/* Image styles */
-img {
-    display: block;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.container {
-    display: flex;
-    align-items: flex-start;
-}
-.left-img {
-    margin-right: 10px;
-}
-.logo{
-    width: 140px;
-}
-
-/* Form styles */
-form {
-    background-color: #AAAAAA;
-    padding: 10px;
-    border-radius: 1px;
-    text-align:center;
-    margin: 20px;
-}
-
-/* Main content styles */
-main {
-    padding: 20px;
-}
-
-nav{
-    display: flex;
-    background-color: #333;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-nav ul {
-    display: flex;
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-
-nav ul li a{
-    display: block;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-
-nav ul li a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-nav ul li a::after{
-    content: '';
-    width: 100%;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-}
-
 /* Footer styles */
 footer {
     background-color: #4682b4; /*Steel blue*/
@@ -144,3 +50,43 @@ footer {
     width: 100%;
     bottom: 0;
 }
+.container{
+    padding: 10px 10%;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.logo{
+    width: 140px;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #010406;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+
+     
+}
+     
+
