@@ -26,7 +26,6 @@
             <h1> Hi, I'm <span>Steve</span><br>Roger from New York</h1>
         </div>
     </div>
-</div>
 <!---------About ------------------->
 <div id="about">
     <div class="container">
@@ -109,7 +108,7 @@
                     <p>Built an app that allows users to track their daily expenses,
                         categorize them, and generate visual reports (e.g., bar graphs
                          or pie charts) to analyze spending patterns.</p>
-                    <a herf="#"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                    <a herf="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -120,7 +119,7 @@
                         users to complete daily mindfulness tasks, such as meditation, journaling, 
                         or exercising.Users earn rewards for completing tasks, which they can use to 
                         customize their in-app avatar.</p>
-                    <a herf="#"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                    <a herf="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -128,7 +127,7 @@
                 <div class="layer">
                     <h3>Voice-Controlled Smart Home System</h3>
                     <p>Create a smart home automation system controlled by voice commands. It can adjust lighting, control appliances, and monitor home security.</p>
-                    <a herf="#"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                    <a herf="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
@@ -145,65 +144,59 @@
                 <p><i class="fa-solid fa-phone"></i> 678-136-7092</p>
                 <p><i class="fa-solid fa-location-dot"></i> 123 Main St, Brooklyn, New York, United States</p>
                 <div class="social-icons">
-                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                 
-        </div>
-            <a href="images/resumeTemplate.pdf" download class="btn btn2" class="btn btn2">Download Resume</a>
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="#" id="resume-download-link" download class="btn btn2" class="btn btn2">Download Resume</a>
+                <span id="resume-error-msg" style="color: red;"></span> <!-- Error message span -->
             </div>
             <div class="contact-right">
-            <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message" rows ="6" placeholder="Your Message" ></textarea>
-                <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows ="6" placeholder="Your Message" ></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>&copy; 2024 All rights reserved | Designed by Cerburs </p>
-
-    </div>
+</div>
+<div class="copyright">
+    <p>&copy; 2024 All rights reserved | Designed by Cerburs </p>
 </div>
 
 
 
 <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (let tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+    function opentab(tabname) {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
         }
-    
-</script>
-<script>
-    var sidemeu = document.getElementById("sidemenu");
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
 
     function openmenu(){
-        sidemeu.style.right = "0";
+        sidemenu.style.right = "0";
     }
     function closemenu(){
-        sidemeu.style.right = "-200px";
+        sidemenu.style.right = "-200px";
     }
-</script>
 
-
-  
-<script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyHsRvHiY77fi4fJhgk-roY_lhpanl3XhJt6vkzbnzJV3yBiLlOg00oKrO0pmCrVSV3tw/exec'
     const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg');
   
     form.addEventListener('submit', e => {
       e.preventDefault()
@@ -217,6 +210,29 @@ var tablinks = document.getElementsByClassName("tab-links");
         })
     .catch(error => console.error('Error!', error.message))
 })
+</script>
+<!--Resume Updater Section-->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const resumeLink = document.getElementById('resume-download-link');
+        const resumeErrorMsg = document.getElementById('resume-error-msg');
+        fetch('https://script.google.com/macros/s/AKfycbzGXDWEP4MczN8V-UfE7y9_LO6WwNaZjnN6vPrxFtpOOj9Q4KaiM8WZQOiAs53Kqxaobw/exec')
+        .then(response => response.json())
+        .then(data => {
+            if (data.resumeUrl) {
+                resumeLink.href = data.resumeUrl;
+                resumeLink.style.display = 'inline'; // Ensure link is visible
+                resumeErrorMsg.textContent = ''; // Clear any previous error message
+            } else {
+                throw new Error('No resume URL found');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching resume link:', error);
+                resumeLink.style.display = 'none'; // Hide the link if an error occurs
+                resumeErrorMsg.textContent = 'Error fetching resume link. Please try again later.';
+            });
+    });
 </script>
 </body>
 </html>
